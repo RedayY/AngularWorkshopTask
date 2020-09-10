@@ -1,4 +1,14 @@
 <ul>
-    <li><a class="active" href="#books">Books</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
+  <li><a class="active" href="#books">Books</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<button mat-mini-fab color="primary" [matMenuTriggerFor]="menu">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item href="#books">Books</button>
+  <button mat-menu-item href="#about">About</button>
+</mat-menu>
+
+<app-info-box></app-info-box>
