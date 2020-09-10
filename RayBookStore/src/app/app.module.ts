@@ -12,13 +12,15 @@ import { InfoBoxComponent } from './info-box/info-box.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { TitleBoxComponent } from './title-box/title-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     InfoBoxComponent,
-    MouseCursorComponent
+    MouseCursorComponent,
+    TitleBoxComponent
   ],
   imports: [
     BrowserModule,
