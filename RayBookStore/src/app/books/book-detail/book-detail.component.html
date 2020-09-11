@@ -1,0 +1,8 @@
+<hr />
+
+<table *ngIf="$books">
+  <tr *ngFor="let nb of getKeys($books | async)">
+    <td>{{ nb }}</td>
+    <td>{{ ($books | async)[nb] }}</td>
+  </tr>
+</table>

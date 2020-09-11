@@ -1,15 +1,16 @@
 <ul>
   <li>
+    <button mat-mini-fab color="primary" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </li>
+  <li>
     <a class="active" routerLinkActive="active" routerLink="/books">Books</a>
   </li>
   <li>
     <a routerLinkActive="active" routerLink="/about">About</a>
   </li>
 </ul>
-
-<button mat-mini-fab color="primary" [matMenuTriggerFor]="menu">
-  <mat-icon>menu</mat-icon>
-</button>
 
 <mat-menu #menu="matMenu">
   <button mat-menu-item>
