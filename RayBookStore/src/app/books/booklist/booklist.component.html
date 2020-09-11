@@ -2,9 +2,7 @@
   <tr *ngFor="let book of $books | async; let i = index">
     <td>{{ i }} {{ book.title }}</td>
     <td>
-      <a routerLinkActive="active" routerLink="/books/{{ book.isbn }}">
-        {{ book.isbn }}
-      </a>
+      <a [routerLink]="[book.isbn]">{{ book.isbn }}</a>
     </td>
     <td>{{ book.subtitle }}</td>
   </tr>
