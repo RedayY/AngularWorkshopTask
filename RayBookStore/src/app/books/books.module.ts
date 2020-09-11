@@ -3,14 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { BooksRoutingModule } from './books-routing.module';
 import { BooksComponent } from './books/books.component';
-
+import { BooklistComponent } from './booklist/booklist.component';
 
 @NgModule({
-  declarations: [BooksComponent],
-  imports: [
-    CommonModule,
-    BooksRoutingModule
-  ],
-  exports: [BooksComponent]
+  declarations: [BooksComponent, BooklistComponent],
+  imports: [CommonModule, BooksRoutingModule],
+  exports: [BooksComponent, BooklistComponent],
 })
-export class BooksModule { }
+export class BooksModule {}
