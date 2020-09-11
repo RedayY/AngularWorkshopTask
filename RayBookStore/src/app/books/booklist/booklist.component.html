@@ -1,7 +1,9 @@
 <table>
   <tr *ngFor="let book of $books | async; let i = index">
     <td>{{ i }} {{ book.title }}</td>
-    <td>{{ book.isbn }}</td>
+    <td>
+      <a [routerLink]="[book.isbn]">{{ book.isbn }}</a>
+    </td>
     <td>{{ book.subtitle }}</td>
   </tr>
 </table>

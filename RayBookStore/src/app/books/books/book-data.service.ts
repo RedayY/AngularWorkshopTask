@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Book } from './book';
-import { of, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { shareReplay } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -12,5 +13,11 @@ export class BookDataService {
 
   getBooks(): Observable<Book[]> {
     return this.http.get<Book[]>('http://localhost:4730/books');
+  }
+
+  getBookByISBN(isbn: string): Observable<Book[]> {
+    return this.http
+      .get<Book[]>('http://localhost:4730/books/' + isbn)
+      .pipe(shareReplay(1));
   }
 }
