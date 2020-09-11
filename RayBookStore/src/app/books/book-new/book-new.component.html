@@ -1,0 +1,16 @@
+<form [formGroup]="bookForm" (ngSubmit)="createNewBook()">
+  <p>Title: <input type="title" formControlName="title" /><br /></p>
+  <p>Subtitle: <input type="subtitle" formControlName="subtitle" /><br /></p>
+  <p>ISBN: <input type="isbn" formControlName="isbn" /><br /></p>
+  <p>Abstract: <input type="abstract" formControlName="abstract" /><br /></p>
+  <p>
+    Number of Pages: <input type="numPages" formControlName="numPages" /><br />
+  </p>
+  <p>Author: <input type="author" formControlName="author" /><br /></p>
+  <div formGroupName="publisher">
+    <p>Publisher Name: <input type="name" formControlName="name" /></p>
+    <p>Publisher Url: <input type="url" formControlName="url" /></p>
+  </div>
+  <p>Cover: <input type="cover" formControlName="cover" /><br /></p>
+  <button mat-flat-button type="submit">Add new Book</button>
+</form>

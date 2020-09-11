@@ -20,4 +20,8 @@ export class BookDataService {
       .get<Book[]>('http://localhost:4730/books/' + isbn)
       .pipe(shareReplay(1));
   }
+
+  postNewBook(newBook: Book) {
+    return this.http.post<Book>('http://localhost:4730/books/', newBook);
+  }
 }
