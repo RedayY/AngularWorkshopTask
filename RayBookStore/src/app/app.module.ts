@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { TitleBoxComponent } from './title-box/title-box.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { TitleBoxComponent } from './title-box/title-box.component';
     NavigationComponent,
     InfoBoxComponent,
     MouseCursorComponent,
-    TitleBoxComponent
+    TitleBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,10 +30,11 @@ import { TitleBoxComponent } from './title-box/title-box.component';
     AboutModule,
     MatIconModule,
     MatMenuModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [NavigationComponent]
+  exports: [NavigationComponent],
 })
-export class AppModule { }
+export class AppModule {}

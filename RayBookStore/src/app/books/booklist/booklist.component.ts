@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { BookDataService } from '../books/book-data.service';
 import { Book } from '../books/book';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-booklist',
