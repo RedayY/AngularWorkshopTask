@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Book } from './book';
+import { of, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +26,7 @@ export class BookDataService {
     },
   ];
 
-  getBooks(): Book[] {
-    return this.books;
+  getBooks(): Observable<Book[]> {
+    return of(this.books);
   }
 }

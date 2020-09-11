@@ -1,5 +1,5 @@
 <table>
-  <tr *ngFor="let book of books; let i = index">
+  <tr *ngFor="let book of $books | async; let i = index">
     <td>{{ i }} {{ book.title }}</td>
     <td>{{ book.isdn }}</td>
     <td>{{ book.subtitle }}</td>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BookDataService } from '../books/book-data.service';
 import { Book } from '../books/book';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-booklist',
@@ -8,11 +10,11 @@ import { Book } from '../books/book';
   styleUrls: ['./booklist.component.scss'],
 })
 export class BooklistComponent implements OnInit {
-  books: Book[];
+  $books: Observable<Book[]>;
 
   constructor(private bookData: BookDataService) {}
 
   ngOnInit(): void {
-    this.books = this.bookData.getBooks();
+    this.$books = this.bookData.getBooks();
   }
 }
